@@ -7,10 +7,17 @@
 <body>
 <h1>Barcha Artikillar</h1>
 <a href="{% url 'create-articles' %}">create article</a>
-<a href="{% url 'logout' %}">Logout</a>
+<br> <br>
+
+
 {% for article in articles %}
-    <h2>{{ article.title }}</h2>
-    <p>{{ article.content }}</p>
+    <a href="/{{ article.slug }}/"><h4>{{ article.title }}</h4></a>
+        <p>{{ article.created_at|date:"d.m.Y"}} | {{article.author }}</p>
+        <hr>
 {% endfor %}
+
+
+<a href="{% url 'logout' %}">Logout</a>
+
 </body>
 </html>

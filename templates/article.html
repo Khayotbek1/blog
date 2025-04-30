@@ -1,0 +1,8 @@
+<h2>{{ article.title }}</h2>
+<p>{{ article.created_at }} | {{ article.author }}</p>
+<hr>
+<p>{{ article.context }}</p>
+
+<br>
+<a href="{% url 'index' %}">Ortga</a>
+<a href="{% url 'logout' %}">logout</a>
